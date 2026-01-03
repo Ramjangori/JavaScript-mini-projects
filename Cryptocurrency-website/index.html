@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoCurrency - website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img class="logo" src="./logo.jfif" alt="">
+            <ul>
+               <li><a href="#">market</a></li>
+                <li><a href="#">feature</a></li>
+                 <li><a href="#">About Us</a></li>
+                  <li><a href="#">white paper</a></li>
+            </ul>
+            <a href="">EN</a>
+        </nav>
+        <div class="content">
+            <h1>BUY & SELL <span>CRYPTO</span></h1>
+            <p>World biggest cryptpcurrency exchange available on web as well as mobile phone</p>
+            <a href="allcurrency.html">EXPLORE MORE</a>
+        </div>
+        <div class="coin-list">
+            <div class="coin">
+                <img src="bitcoin.webp" alt="">
+                <div>
+                    <h2>$00</h2>
+                    <p>Bitcoin</p>
+                </div>
+            </div>
+            <div class="coin">
+                <img src="bitcoin.webp" alt="">
+                <div>
+                    <h2>$00</h2>
+                    <p>Etherium</p>
+                </div>
+            </div>
+             <div class="coin">
+                <img src="bitcoin.webp" alt="">
+                <div>
+                    <h2>$00</h2>
+                    <p>Etherium</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+<script>
+    const coinList = document.querySelector(".coin-list")
+    const showPrice=async()=>{
+        const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr";
+        let responce = await fetch(url)
+        let data = await responce.json();
+        console.log(data)
+        coinList.innerHTML = `
+            <div class="coin">
+                <img src="${data[0].image}" alt="">
+                <div>
+                    <h2>INR Rs ${data[0].current_price}</h2>
+                    <p>${data[0].name}<span>${data[0].price_change_percentage_24h}%</span></p>
+                </div>
+            </div>
+            <div class="coin">
+                <img src="${data[1].image}" alt="">
+                <div>
+                    <h2>INR Rs ${data[1].current_price}</h2>
+                    <p>${data[1].name}<span>${data[1].price_change_percentage_24h}%</span></p>
+                </div>
+            </div>
+            <div class="coin">
+                <img src="${data[2].image}" alt="">
+                <div>
+                    <h2>INR Rs ${data[2].current_price}</h2>
+                    <p>${data[2].name}<span>${data[2].price_change_percentage_24h}%</span></p>
+                </div>
+            </div>
+            `
+        
+       
+        
+    }
+    setInterval(showPrice(),1000);
+    
+</script>
+</html>

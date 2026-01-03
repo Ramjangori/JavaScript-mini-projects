@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'pappins', sans-serif ;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    background: url(./background-image.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    color:white;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    border-bottom: #060836 2px solid;
+}
+.navbar img{
+    font-size: 35px;
+    width:80px;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.navbar ul li{
+    margin: 0px 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.navbar ul li a:hover{
+    color: #11157d;
+}
+.navbar a{
+    color:white;
+    text-decoration: none;
+}
+
+.content{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left:20%;
+    margin-top:20px;
+
+}
+.content h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.content h1 span{
+    font-size: 60px;
+    margin-bottom: 20px;
+    color:#603FE2;
+}
+.content p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.content a{
+    width: 200px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    background-color: #603FE2;
+    box-shadow: 3px 3px #603FE2;
+    border-radius: 10px;
+    transition: 0.3s;
+   
+    
+}
+.content a:hover{
+    background-color: white;
+    color:#603FE2;
+
+}
+.coin-list{
+    width:60%;
+    margin-left:40%;
+    display: flex;
+    justify-content: space-between;
+}
+.coin-list .coin{
+    display:flex;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.coin-list .coin img{
+    width:50px;
+}
+.coin-list .coin p {
+    display:flex;
+    justify-content:space-between;
+}
+.coin-list .coin p span{
+    font-size: 12px;
+}
